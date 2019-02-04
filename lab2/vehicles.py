@@ -22,17 +22,17 @@ sns_plot.axes[0,0].set_ylim(0,)
 sns_plot.axes[0,0].set_xlim(0,)
 sns_plot.savefig("current_fleet_scatterplot.png",bbox_inches = "tight")
 
+# new fleet
 
 new_fleet_index = read_csv('new_fleet.csv')
-
+#scatter plot
 sns_plot = sns.lmplot(new_fleet_index.columns[0],new_fleet_index.columns[1],data=new_fleet_index,fit_reg=False)
 sns_plot.axes[0,0].set_ylim(0,)
 sns_plot.axes[0,0].set_xlim(0,)
 sns_plot.savefig("new_fleet_scatterplot.png",bbox_inches = "tight")
 
 plt.clf()
-# new fleet
-sns_plot3 = sns.distplot(new_fleet,kde=False, rug=True).get_figure()
+sns_plot3 = sns.distplot(new_fleet[0:79],kde=False, rug=True).get_figure()
 axes = plt.gca()
 axes.set_xlabel("Miles per gallon")
 axes.set_ylabel("Frequency")

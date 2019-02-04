@@ -23,12 +23,12 @@ def bootstrap(sample, sample_size, iterations):
         mean_averages.append(np.mean(samples[i]))
         print("mean for iteration " + str(i) + " : " + str(mean_averages[i]))
         i+=1
-    # remove 2.5% percentile from either end and return upper or lower average.
-    mean_averages.sort()
-    data_mean = np.percentile(mean_averages,95)
-    lower = mean_averages[0]
-    upper = mean_averages[1]
-	return data_mean, lower, upper
+
+
+    data_mean = np.mean(mean_averages)
+    lower = np.percentile(mean_averages,5)
+    upper = np.percentile(mean_averages,95)
+    return data_mean, lower, upper
 
 
 if __name__ == "__main__":
