@@ -17,3 +17,9 @@ new fleet histogram:
 
 new fleet scatter plot:
 ![logo](./lab2/new_fleet_scatterplot.png?raw=true)
+
+
+Assigment work:
+
+As the dataset is massive it is linked here for reference
+https://github.com/peterlloydgent/ce888labs/blob/master/CE889ASSIGNMENT_GENTP53602/10000games.csv
